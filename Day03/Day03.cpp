@@ -68,7 +68,7 @@ int main()
   // Part 2
   {
     auto lines = read_lines(L"input.txt");
-    auto badgePriorities = group_n<int>(3, lines, CalculateGroupBadgePriority);
+    auto badgePriorities = map_group_n<int>(3, lines, CalculateGroupBadgePriority);
     auto badgePrioritySum = accumulate(begin(badgePriorities), end(badgePriorities), 0);
 
     wcout << format(L"GroupBadgePrioritySum: {}", badgePrioritySum) << endl;

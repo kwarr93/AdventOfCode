@@ -5,7 +5,7 @@
 namespace Advent::Algorithms
 {
   template<typename T, typename TInput>
-  std::vector<T> group_n(size_t n, const TInput& input, const std::function<T(typename TInput::const_iterator&, typename TInput::const_iterator&)> groupper)
+  std::vector<T> map_group_n(size_t n, const TInput& input, const std::function<T(typename TInput::const_iterator&, typename TInput::const_iterator&)> mapper)
   {
     if (input.empty()) return {};
 
@@ -19,7 +19,7 @@ namespace Advent::Algorithms
       ++groupEnd;
       if (groupEnd == cend(input) || groupEnd - groupStart == 3)
       {
-        result.push_back(groupper(groupStart, groupEnd));
+        result.push_back(mapper(groupStart, groupEnd));
         groupStart = groupEnd;
       }
     }
