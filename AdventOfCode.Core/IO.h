@@ -1,9 +1,6 @@
 #pragma once
 
 #include "pch.h"
-#include "framework.h"
-
-#include <functional>
 
 namespace Advent::IO
 {
