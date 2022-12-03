@@ -1,4 +1,4 @@
-#include "..\AdventOfCode.Core\IO.h"
+#include "..\Advent.Core\IO.h"
 
 #include <iostream>
 #include <numeric>

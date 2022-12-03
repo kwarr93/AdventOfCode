@@ -1,5 +1,5 @@
-#include "..\AdventOfCode.Core\Algorithms.h"
-#include "..\AdventOfCode.Core\IO.h"
+#include "..\Advent.Core\Algorithms.h"
+#include "..\Advent.Core\IO.h"
 
 #include <iostream>
 #include <numeric>
