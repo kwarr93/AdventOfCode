@@ -26,4 +26,16 @@ namespace Advent::Algorithms
 
     return result;
   }
+
+  template<typename TCollection>
+  void remove_all(TCollection& collection, const typename TCollection::value_type& value)
+  {
+    collection.erase(std::remove(collection.begin(), collection.end(), value), collection.end());
+  }
+
+  template<typename TCollection, class TPredicate>
+  void remove_all_if(TCollection& collection, TPredicate predicate)
+  {
+    collection.erase(std::remove_if(collection.begin(), collection.end(), predicate), collection.end());
+  }
 }
