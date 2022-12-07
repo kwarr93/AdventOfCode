@@ -38,4 +38,12 @@ namespace Advent::Algorithms
   {
     collection.erase(std::remove_if(collection.begin(), collection.end(), predicate), collection.end());
   }
+
+  template<typename T>
+  auto count_unique_items(const T& collection)
+  {
+    using value_t = T::value_type;
+
+    return set<value_t>(collection.begin(), collection.end()).size();
+  }
 }
